@@ -1,3 +1,9 @@
+# FingerNails - site
+
+This project has been taken patter from kasun (beautician).
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
