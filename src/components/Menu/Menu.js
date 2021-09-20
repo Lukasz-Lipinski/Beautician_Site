@@ -1,22 +1,18 @@
-import { Route, Switch } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-import Menu_links from './Menu_links';
-import { Contact, Gallery, Home, PriceList, Reservation, SpecialOffers } from '../../Pages';
 import linksName from '../Data/linksName';
 
-export default function Menu({ className }) {
-  return (
-    <nav className={`${className}`}>
-      <Menu_links />
+export default function Menu_links(props) {
+  const { className } = props;
 
-      <Switch>
-        <Route exact path='/' component={Home} />
-        <Route path='/contact' component={Contact} />
-        <Route path='/gallery' component={Gallery} />
-        <Route path='/pricelist' component={PriceList} />
-        <Route path='/reservation' component={Reservation} />
-        <Route path='/specialoffers' component={SpecialOffers} />
-      </Switch>
-    </nav>
+  return (
+    <div className={`${className}`}>
+      <div className={`${className}__logo`}>
+        <img src='../../Logo.png' alt="logo" />
+      </div>
+      <div className={`${className}__links`}>
+        {linksName.map((link, index) => <Link key={index} to={`${link.src}`} Active>{link.link}</Link>)}
+      </div>
+    </div>
   )
 }
