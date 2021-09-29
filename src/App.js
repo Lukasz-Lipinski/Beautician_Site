@@ -2,7 +2,10 @@ import { Menu } from './components/Menu';
 import { Route, Switch } from 'react-router-dom';
 
 import { Contact, Gallery, Home, PriceList, Reservation, SpecialOffers } from './Pages/';
+import Footer from './components/Footer/Footer';
+
 import './styles/style.scss';
+
 
 function App() {
   return (
@@ -17,6 +20,8 @@ function App() {
         <Route path='/reservation' component={Reservation} />
         <Route path='/specialoffers' component={SpecialOffers} />
       </Switch>
+
+      <Footer className="footer" />
     </div>
   );
 }

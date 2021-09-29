@@ -1,5 +1,11 @@
+import MenuCards from "../../components/Body/Cards/MenuCards";
+import classess from '../Data/classess';
+import '../../styles/sites.scss';
+
 export default function Home() {
   return (
-    <div>Home</div>
+    <div className={classess.sites}>
+      <MenuCards />
+    </div>
   )
 }

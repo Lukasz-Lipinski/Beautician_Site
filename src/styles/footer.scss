@@ -1,0 +1,25 @@
+@use 'variables' as *;
+
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 66px;
+  width: 100%;
+  background-color: $primary-color-dark;
+  color: $white;
+  align-items: center;
+
+  &__information {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  &__icons {
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+}
