@@ -10,16 +10,49 @@
   background-color: $primary-color-dark;
   color: $white;
   align-items: center;
+  
 
   &__information {
-    width: 80%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
+    margin-block: 20px;
+    @extend %row;
   }
   &__icons {
-    width: 30%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
+    @extend %row;
+
+    #logoFacebook, #logoInstagram {
+      border: 3px solid $white;
+      border-radius: 100%;
+      padding: 15px;
+      background-color: transparent;
+      transition: background-color 0.3s;
+    }
+
+    #logoFacebook:hover, #logoInstagram:hover {
+      background-color: hsla(20, 100%, 100%, 0.3);
+      transition: background-color 0.3s;
+    }
   }
 
+}
+
+%row {
+  div{
+    margin-inline: 40px;
+    span {
+      display: block;
+      word-spacing: 4px;
+      text-align: center;
+      margin-block: 8px;
+    }
+    span:first-child {
+      font-size: 36px;
+      padding-bottom: 6px;
+    }
+  }
 }

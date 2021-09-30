@@ -1,8 +1,9 @@
 import { Menu } from './components/Menu';
 import { Route, Switch } from 'react-router-dom';
 
-import { Contact, Gallery, Home, PriceList, Reservation, SpecialOffers } from './Pages/';
+import Body from './components/Body/Body';
 import Footer from './components/Footer/Footer';
+import { Home } from './Pages';
 
 import './styles/style.scss';
 
@@ -13,12 +14,7 @@ function App() {
       <Menu className='nav' />
 
       <Switch>
-        <Route exact path='/' component={Home} />
-        <Route path='/contact' component={Contact} />
-        <Route path='/gallery' component={Gallery} />
-        <Route path='/pricelist' component={PriceList} />
-        <Route path='/reservation' component={Reservation} />
-        <Route path='/specialoffers' component={SpecialOffers} />
+        <Route exact path='/:page' component={Body} />
       </Switch>
 
       <Footer className="footer" />
