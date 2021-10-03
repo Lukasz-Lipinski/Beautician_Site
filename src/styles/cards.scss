@@ -1,41 +1,10 @@
 @use 'animations' as *;
 @use 'functions' as *;
 @use 'variables' as *;
-
-%card {
-  width: 300px;
-  height: 400px;
-  margin: 15px 40px;
-  border: 1px solid black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-}
-
-@mixin cardsBackground($url) {
-  background-image: url($url);
-    background-size: cover;
-    background-position: center;
-}
-
-@keyframes fadeIn {
-  0%{
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@mixin fadeInElement($time, $elementNumber) {
-  animation: fadeIn $time ease-in forwards ($elementNumber*$fadeInTime);
-}
-
+@use 'classess' as*;
 
 .cards {
-  display: flex;
-  flex-wrap: wrap;
+  @extend %displayFlex;
   width: 100%;
   justify-content: center;
   font-size: 24px;

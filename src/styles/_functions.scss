@@ -1,0 +1,11 @@
+@use 'variables' as *;
+
+@mixin cardsBackground($url) {
+  background-image: url($url);
+    background-size: cover;
+    background-position: center;
+}
+
+@mixin fadeInElement($time, $elementNumber) {
+  animation: fadeIn $time ease-in forwards ($elementNumber*$fadeInTime);
+}

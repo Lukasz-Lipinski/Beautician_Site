@@ -1,20 +1,22 @@
+import { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
+import dataContext from '../Data/dataContext';
 
-import linksName from '../Data/linksName';
-
-export default function Menu_links(props) {
-  const { className } = props;
+export default function Menu_links() {
   const active = { color: '#8cd425' };
 
+  const data = useContext(dataContext);
+  const { linksName, classess } = data;
+
   return (
-    <div className={`${className}`}>
-      <div className={`${className}__logo`}>
+    <div className={`${classess.menuNav}`}>
+      <div className={`${classess.menuNav}__logo`}>
         <img url='./pictures/Logo.png' alt="logo" />
       </div>
-      <div className={`${className}__links`}>
+      <div className={`${classess.menuNav}__links`}>
         {linksName.map((link, index) => {
           if (link.componentName === 'Reservation') {
-            return <NavLink activeStyle={active} key={`listName-link-${index}`} to={`/${link.src}`}><b>{link.link}</b></NavLink>
+            return <NavLink reservation activeStyle={active} key={`listName-link-${index}`} to={`/${link.src}`}>{link.link}</NavLink>
           }
           return <NavLink activeStyle={active} key={`listName-link-${index}`} to={`/${link.src}`}>{link.link}</NavLink>
         })}

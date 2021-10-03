@@ -1,0 +1,25 @@
+@use 'variables' as *;
+@use 'classess' as *;
+@use 'animations' as*;
+
+
+.pricelistNavigation {
+  opacity: 0;
+  @extend %displayFlex;
+  justify-content: space-evenly;
+  padding: 16px 60px;
+  width: 100%;
+  animation: fadeIn 0.3s ease-in forwards 0.1s normal;
+  a {
+    padding: 14px 22px;
+    font-weight: bolder;
+    color: $primary-color;
+    outline: 3px solid $primary-color-dark;
+    text-transform: uppercase;
+   }
+
+   a:hover {
+    background-color: $primary-color-dark;
+    color: $white;
+   }
+}

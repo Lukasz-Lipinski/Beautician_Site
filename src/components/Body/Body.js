@@ -1,11 +1,11 @@
 import { useParams } from 'react-router-dom';
 import { Contact, Gallery, Home, PriceList, Reservation, SpecialOffers } from '../../Pages';
+import { useCallback } from 'react';
 
 function Body() {
   const { page } = useParams();
-  console.log(page);
 
-  const returnPage = (page) => {
+  const returnPage = useCallback((page) => {
     switch (page) {
       case "contact":
         return <Contact />
@@ -20,10 +20,9 @@ function Body() {
       default:
         return <Home />
     }
-  }
-  return (
-    returnPage(page)
-  )
+  }, [page]);
+
+  return returnPage(page);
 };
 
 export default Body;
