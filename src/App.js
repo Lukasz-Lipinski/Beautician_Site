@@ -12,8 +12,8 @@ const Body = React.lazy(() => import('./components/Body/Body'));
 
 function App() {
   return (
-    <dataContext.Provider value={ data }>
-      <div className="container">
+    <div className="container">
+      <dataContext.Provider value={data}>
         <Menu />
 
         <Suspense fallback="loading...">
@@ -21,10 +21,10 @@ function App() {
             <Route exact path='/:page' component={Body} />
           </Switch>
         </Suspense>
+      </dataContext.Provider>
 
-        <Footer className="footer" />
-      </div>
-    </dataContext.Provider>
+      <Footer className="footer" />
+    </div>
   );
 }
 

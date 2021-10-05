@@ -6,6 +6,7 @@ import '../../styles/_variables.scss';
 import dataContext from '../../components/Data/dataContext';
 
 import '../../styles/pricelist.scss'
+import ServicesList from './ServicesList/ServicesList';
 
 export default function PriceList() {
   const data = useContext(dataContext);
@@ -15,12 +16,13 @@ export default function PriceList() {
     <>
       <nav className={classess.pricelist.pricelistNavigation}>
         {servicesName.map((service, index) => (
-          <Link key={`pricelist-button-${index}`} label={service} idIndicatedByLabel={`#${service}`} />
+          <Link key={`pricelist-button-${index}`} label={service.title} idIndicatedByLabel={`#${service.title}`} />
         ))}
       </nav>
 
       <div>
         TABELA Z CENNIKIEM I USLUGAMI
+        <ServicesList />
       </div>
     </>
   )

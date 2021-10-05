@@ -7,7 +7,7 @@ export default function Home() {
   const data = useContext(dataContext);
   const { classess } = data;
   return (
-    <div className={classess.sites}>
+    <div className={classess.container}>
       <MenuCards />
     </div>
   )
