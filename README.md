@@ -3,7 +3,7 @@
 This project has been taken patter from kasun (beautician).
 
 ## needed extensions
-  npm install sass
+  npm install sass | 
   npm install react-router-dom
   
 ## information
