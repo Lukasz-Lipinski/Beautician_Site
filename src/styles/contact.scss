@@ -12,17 +12,33 @@
   align-items: center;
   font-size: 20px;
   animation: fadeIn 0.3s forwards 0.2s normal;
-  &--address {
-    border: 1px solid black;
 
-    span :first-child {
-      font-size: 30px;
-      color: $primary-color-dark;
+  &--address {
+    text-align: center;
+    width: 400px;
+    div {
+      display:flex;
+      align-items: center;
+      padding: 6px;
+
+      span:first-child {
+        margin-right: 20px;
+        font-size: 30px;
+        color: $primary-color-dark;
+        width: 20%;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        p {
+          margin: 5px;
+          padding: 0;
+        }
+      }
     }
-    span {
-      display: block;
-      margin-block: 10px;
-    }
+
   }
 
   &--contactForm {

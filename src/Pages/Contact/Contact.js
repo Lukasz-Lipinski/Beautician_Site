@@ -18,35 +18,43 @@ export default function Contact() {
       <div className={`${contact.container}--${contact.address}`}>
 
         <h3>TSU</h3>
-        <span>
-          <GoLocation />
-          <span>ul. Wrocławska 1234/231</span>
-          <span>53-100, Wrocław</span>
-        </span>
+        <div>
+          <span><GoLocation /></span>
+          <div>
+            <p>ul. Wrocławska 1234/231</p>
+            <p>53-100, Wrocław</p>
+          </div>
+        </div>
 
-        <span>
-          <GoClock />
-          <span>Pon-Pt: 8:00-21:00</span>
-          <span>Sb: 8:00-15:00</span>
-        </span>
+        <div>
+          <span><GoClock /></span>
+          <div>
+            <p>Pon-Pt: 8:00-21:00</p>
+            <p>Sb: 8:00-15:00</p>
+          </div>
+        </div>
 
-        <span>
-          <BiPhone />
-          <span>Fryzjer:</span>
-          <span>+48 222 333 111</span>
-          <span>Kosmetologia:</span>
-          <span>+48 11 222 444</span>
-        </span>
+        <div>
+          <span><BiPhone /></span>
+          <div>
+            <p>Fryzjer:</p>
+            <p>+48 222 333 111</p>
+            <p>Kosmetologia:</p>
+            <p>+48 11 222 444</p>
+          </div>
+        </div>
 
-        <span>
-          <IoMailOutline />
-          <span>fryzjer@tsu.example.com</span>
-          <span>kosmetologia@tsu.example.com</span>
-        </span>
+        <div>
+          <span><IoMailOutline /></span>
+          <div>
+            <p>fryzjer@tsu.example.com</p>
+            <p>kosmetologia@tsu.example.com</p>
+          </div>
+        </div>
 
       </div>
 
-        <Form className={`${contact.container}--${contact.contactForm}`} />
+      <Form className={`${contact.container}--${contact.contactForm}`} />
     </div>
   )
 }

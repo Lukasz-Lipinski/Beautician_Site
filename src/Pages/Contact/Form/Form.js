@@ -8,6 +8,7 @@ export default function Form(props) {
     onChangeEmail,
     valueMsg,
     onChangeMsg,
+    onFocusMsg,
     onClickSend
   } = props;
 
@@ -25,7 +26,7 @@ export default function Form(props) {
 
       <div>
         <label htmlFor="message">Wiadomość:</label>
-        <textarea value={valueMsg} onChange={onChangeMsg}>Masz pytania? Napisz do nas, a postaramy się pomóc</textarea>
+        <textarea value={valueMsg} onChange={onChangeMsg} onFocus={onFocusMsg}>Masz pytania? Napisz do nas, a postaramy się pomóc</textarea>
       </div>
 
       <button onClick={onClickSend}>Wyślij</button>
