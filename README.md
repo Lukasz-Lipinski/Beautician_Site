@@ -2,6 +2,17 @@
 
 This project has been taken patter from kasun (beautician).
 
+## needed extensions
+  npm install sass | 
+  npm install react-router-dom
+  
+## information
+
+This project has been taken patter from kasun (beautician). I've used class components and functional compoentns to make this app. It's not finished yet but I'm currently working on it. 
+
+This site will have 2 form, first for contacting and second for making reservation via internet. (Contact form is almost finished).
+There are patterns without all functional issues but I'm working on it, although I needed to stop making it because of course I'm doing in the same time.
+After making homeworks I'll back to finish this site.
 
 
 # Getting Started with Create React App
