@@ -1,4 +1,6 @@
-export default function Form(props) {
+import FormHOC from '../../../components/HOC-Sites/FormHOC';
+
+function Form(props) {
   const {
     className,
     onSubmit,
@@ -21,7 +23,7 @@ export default function Form(props) {
 
       <div>
         <label htmlFor="email">Email:</label>
-        <input id="email" type="email" value={valueEmail} onChange={onChangeEmail} />
+        <input id="email" type="text" value={valueEmail} onChange={onChangeEmail} />
       </div>
 
       <div>
@@ -29,7 +31,11 @@ export default function Form(props) {
         <textarea value={valueMsg} onChange={onChangeMsg} onFocus={onFocusMsg}>Masz pytania? Napisz do nas, a postaramy się pomóc</textarea>
       </div>
 
-      <button onClick={onClickSend}>Wyślij</button>
+      <span>
+        <button onClick={onClickSend}>Wyślij</button>
+      </span>
     </form>
   )
-}
+};
+
+export default FormHOC(Form);

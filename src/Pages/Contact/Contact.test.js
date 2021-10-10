@@ -1,5 +1,5 @@
 import { Contact } from "..";
-import  renderer  from 'react-test-renderer';
+import renderer from 'react-test-renderer';
 
 describe('testing Contact component', () => {
   it('should receive snapshot', () => {

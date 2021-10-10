@@ -17,7 +17,7 @@ export default function Contact() {
     <div className={`${contact.container}`}>
       <div className={`${contact.container}--${contact.address}`}>
 
-        <h3>TSU</h3>
+        <h2>TSU</h2>
         <div>
           <span><GoLocation /></span>
           <div>
