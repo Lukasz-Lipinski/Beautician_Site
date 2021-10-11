@@ -8,12 +8,52 @@ class ServicesList extends React.Component {
   static contextType = dataContext;
 
   render() {
-    const { classess, servicesName } = this.context;
-    const [title] = servicesName;
+    const { classess, faceProcedurs, aestheticMedicineProcedures, bodyProcedures, spaProcedures, palmsAndTailsProcedures, hairutsProcedures } = this.context;
     return (
-      <div>
-        <h1>{servicesName.map(title => title.title)}</h1>
-      </div>
+      <ul>
+        {faceProcedurs.map((procedure, index) => {
+          if (procedure.title) {
+            return <h1 key={`h1-${procedure.title}-${index}`}>{procedure.title}</h1>
+          } else {
+            return <ServicesListItem key={`listItem-${procedure.title}-${index}`} procedure={procedure} />
+          }
+        })}
+        {aestheticMedicineProcedures.map((procedure, index) => {
+          if (procedure.title) {
+            return <h1 key={`h1-${procedure.title}-${index}`}>{procedure.title}</h1>
+          } else {
+            return <ServicesListItem key={`listItem-${procedure.title}-${index}`} procedure={procedure} />
+          }
+        })}
+        {bodyProcedures.map((procedure, index) => {
+          if (procedure.title) {
+            return <h1 key={`h1-${procedure.title}-${index}`}>{procedure.title}</h1>
+          } else {
+            return <ServicesListItem key={`listItem-${procedure.title}-${index}`} procedure={procedure} />
+          }
+        })}
+        {spaProcedures.map((procedure, index) => {
+          if (procedure.title) {
+            return <h1 key={`h1-${procedure.title}-${index}`}>{procedure.title}</h1>
+          } else {
+            return <ServicesListItem key={`listItem-${procedure.title}-${index}`} procedure={procedure} />
+          }
+        })}
+        {palmsAndTailsProcedures.map((procedure, index) => {
+          if (procedure.title) {
+            return <h1 key={`h1-${procedure.title}-${index}`}>{procedure.title}</h1>
+          } else {
+            return <ServicesListItem key={`listItem-${procedure.title}-${index}`} procedure={procedure} />
+          }
+        })}
+        {hairutsProcedures.map((procedure, index) => {
+          if (procedure.title) {
+            return <h1 key={`h1-${procedure.title}-${index}`}>{procedure.title}</h1>
+          } else {
+            return <ServicesListItem key={`listItem-${procedure.title}-${index}`} procedure={procedure} />
+          }
+        })}
+      </ul>
     )
   }
 }
