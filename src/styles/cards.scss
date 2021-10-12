@@ -8,47 +8,21 @@
   width: 100%;
   justify-content: center;
   font-size: 24px;
+  @for $i from 0 to 6 {
+    &--card__#{$i} {
+      @extend %card;
+      @include fadeInElement(0.3s, 1*$i);
+      @if $i == 1 {
+        @include cardsBackground('./pictures/card--image__#{$i}.jpeg');
+      }
+      @else{ @include cardsBackground('./pictures/card--image__#{$i}.jpg');}
+      @if $i == 3 {
+        text-align: center;
+      }
+    }
 
-  &--card--medycyna_estetyczna {
-    @extend %card;
-    @include fadeInElement(0.2s, 1);
-    @include cardsBackground('./pictures/medycyna_estetyczna.jpg');
-  }
-  &--card--medycyna_estetyczna:hover {
-    background-color: grey;
-  }
-
-  &--card--zabiegi_twarzy {
-    @extend %card;
-    @include fadeInElement(0.3s, 2);
-    @include cardsBackground('./pictures/oczyszczanie.jpeg');
-  }
-
-  &--card--zabiegi_na_cialo {
-    @extend %card;
-    @include fadeInElement(0.3s, 3);
-    @include cardsBackground('./pictures/zabiegi_na_cialo.jpg');
-
-  }
-
-  &--card--zabiegi_na_dlonie_i_paznokcie {
-    @extend %card;
-    text-align: center;
-    @include fadeInElement(0.3s, 4);
-    @include cardsBackground('./pictures/zabiegi_na_dlonie_i_paznokcie.jpg');
-  }
-
-  &--card--zabiegi_dla_panów {
-    @extend %card;
-    @include fadeInElement(0.3s, 5);
-    @include cardsBackground('./pictures/zabiegi_dla_panow.jpg');
-
-  }
-
-  &--card--zabiegi_na_włosy {
-    @extend %card;
-    @include fadeInElement(0.3s, 6);
-    @include cardsBackground('./pictures/zabiegi_na_wlosy.jpg');
-
+    &--card__#{$i}:hover {
+      //Dokończyć
+    }
   }
 }

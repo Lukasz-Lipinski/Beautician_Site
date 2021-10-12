@@ -2,9 +2,9 @@ import React from "react";
 
 class Card extends React.PureComponent {
   render() {
-    const { name, title } = this.props;
+    const { index, title } = this.props;
     return (
-      <div className={`cards--card--${name}`}>
+      <div className={`cards--card__${index}`}>
         <div>{title}</div>
       </div>
     )

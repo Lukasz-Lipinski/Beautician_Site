@@ -16,7 +16,7 @@ export default function MenuCards() {
 
   return (
     <Cards className="cards">
-      {cardConfig.map(card => <Card title={card.title} name={card.name} />)}
+      {cardConfig.map((card, index) => <Card title={card.title} index={index} />)}
     </Cards>
   )
 }
