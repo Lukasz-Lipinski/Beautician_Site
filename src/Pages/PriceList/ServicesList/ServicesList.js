@@ -9,8 +9,10 @@ class ServicesList extends React.Component {
 
   render() {
     const { classess, faceProcedurs, aestheticMedicineProcedures, bodyProcedures, spaProcedures, palmsAndTailsProcedures, hairutsProcedures } = this.context;
+    const { pricelist } = classess;
+
     return (
-      <ul>
+      <ul className={pricelist.serviceList}>
         {faceProcedurs.map((procedure, index) => {
           if (procedure.title) {
             return <h1 id={`#${procedure.title}`} key={`h1-${procedure.title}-${index}`}>{procedure.title}</h1>

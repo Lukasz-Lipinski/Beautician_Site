@@ -2,25 +2,69 @@
 @use 'classess' as *;
 @use 'animations' as*;
 
-
-.pricelistNavigation {
-  opacity: 0;
+.container {
   @extend %displayFlex;
-  justify-content: space-evenly;
-  padding: 16px 60px;
-  width: 100%;
-  animation: fadeIn 0.3s ease-in forwards 0.1s normal;
-  a {
-    padding: 14px 22px;
-    font-weight: bolder;
-    color: $primary-color;
-    outline: 3px solid $primary-color-dark;
-    text-transform: uppercase;
-    text-decoration: none;
-   }
+  justify-content: center;
 
-   a:hover {
-    background-color: $primary-color-dark;
-    color: $white;
-   }
+  .pricelistNavigation {
+    @extend %displayFlex;
+    justify-content: space-evenly;
+    padding: 16px 60px;
+    width: 100%;
+    opacity: 0;
+    animation: fadeIn 0.3s ease-in forwards 0.1s normal;
+    a {
+      padding: 14px 22px;
+      font-weight: bolder;
+      color: $primary-color;
+      outline: 3px solid $primary-color-dark;
+      text-transform: uppercase;
+      text-decoration: none;
+     }
+
+     a:hover {
+      background-color: $primary-color-dark;
+      color: $white;
+     }
+  }
+
+  .serviceList {
+    opacity: 0;
+    animation: fadeIn 0.3s ease-in forwards 0.1s normal;
+
+    h1 {
+      color: $primary-color-dark;
+      text-transform: uppercase;
+      padding-block: 15px;
+    }
+
+    a {
+      font-size: 26px;
+    }
+
+    a:active {
+      animation: rotateCross 0.1s forwards;
+    }
+
+    .serviceListItem {
+      @extend %displayFlex;
+      flex-direction: column;
+      list-style: none;
+      background-color: $white;
+      padding: 10px 15px;
+      margin: 4px 0;
+      border-radius: 15px;
+      width: 1200px;
+
+      div {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    .serviceListItem:hover {
+      color: $primary-color;
+    }
+  }
+
 }

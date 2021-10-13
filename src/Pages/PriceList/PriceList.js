@@ -11,19 +11,16 @@ import ServicesList from './ServicesList/ServicesList';
 export default function PriceList() {
   const data = useContext(dataContext);
   const { servicesName, classess } = data;
+  const { container } = classess;
 
   return (
-    <>
+    <div className={container}>
       <nav className={classess.pricelist.pricelistNavigation}>
         {servicesName.map((service, index) => (
           <Link key={`pricelist-button-${index}`} label={service.title} idIndicatedByLabel={service.title} />
         ))}
       </nav>
-
-      <div>
-        TABELA Z CENNIKIEM I USLUGAMI
-        <ServicesList />
-      </div>
-    </>
+      <ServicesList />
+    </div>
   )
 }
