@@ -13,42 +13,42 @@ class ServicesList extends React.Component {
       <ul>
         {faceProcedurs.map((procedure, index) => {
           if (procedure.title) {
-            return <h1 key={`h1-${procedure.title}-${index}`}>{procedure.title}</h1>
+            return <h1 id={`#${procedure.title}`} key={`h1-${procedure.title}-${index}`}>{procedure.title}</h1>
           } else {
             return <ServicesListItem key={`listItem-${procedure.title}-${index}`} procedure={procedure} />
           }
         })}
         {aestheticMedicineProcedures.map((procedure, index) => {
           if (procedure.title) {
-            return <h1 key={`h1-${procedure.title}-${index}`}>{procedure.title}</h1>
+            return <h1 id={`${procedure.title}`} key={`h1-${procedure.title}-${index}`}>{procedure.title}</h1>
           } else {
             return <ServicesListItem key={`listItem-${procedure.title}-${index}`} procedure={procedure} />
           }
         })}
         {bodyProcedures.map((procedure, index) => {
           if (procedure.title) {
-            return <h1 key={`h1-${procedure.title}-${index}`}>{procedure.title}</h1>
+            return <h1 id={`${procedure.title}`} key={`h1-${procedure.title}-${index}`}>{procedure.title}</h1>
           } else {
             return <ServicesListItem key={`listItem-${procedure.title}-${index}`} procedure={procedure} />
           }
         })}
         {spaProcedures.map((procedure, index) => {
           if (procedure.title) {
-            return <h1 key={`h1-${procedure.title}-${index}`}>{procedure.title}</h1>
+            return <h1 id={`${procedure.title}`} key={`h1-${procedure.title}-${index}`}>{procedure.title}</h1>
           } else {
             return <ServicesListItem key={`listItem-${procedure.title}-${index}`} procedure={procedure} />
           }
         })}
         {palmsAndTailsProcedures.map((procedure, index) => {
           if (procedure.title) {
-            return <h1 key={`h1-${procedure.title}-${index}`}>{procedure.title}</h1>
+            return <h1 id={`${procedure.title}`} key={`h1-${procedure.title}-${index}`}>{procedure.title}</h1>
           } else {
             return <ServicesListItem key={`listItem-${procedure.title}-${index}`} procedure={procedure} />
           }
         })}
         {hairutsProcedures.map((procedure, index) => {
           if (procedure.title) {
-            return <h1 key={`h1-${procedure.title}-${index}`}>{procedure.title}</h1>
+            return <h1 id={`${procedure.title}`} key={`h1-${procedure.title}-${index}`}>{procedure.title}</h1>
           } else {
             return <ServicesListItem key={`listItem-${procedure.title}-${index}`} procedure={procedure} />
           }

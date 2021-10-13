@@ -1,10 +1,10 @@
 import React, { memo } from 'react';
 
 function Link(props) {
-  const { label, idIndecatedByLabel } = props;
+  const { label, idIndicatedByLabel } = props;
 
   return (
-    <a href={idIndecatedByLabel}>{label}</a>
+    <a href={`#${idIndicatedByLabel}`}>{label}</a>
   )
 }
 

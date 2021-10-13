@@ -16,7 +16,7 @@ export default function PriceList() {
     <>
       <nav className={classess.pricelist.pricelistNavigation}>
         {servicesName.map((service, index) => (
-          <Link key={`pricelist-button-${index}`} label={service.title} idIndicatedByLabel={`#${service.title}`} />
+          <Link key={`pricelist-button-${index}`} label={service.title} idIndicatedByLabel={service.title} />
         ))}
       </nav>
 
