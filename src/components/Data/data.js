@@ -85,6 +85,20 @@ const data = {
     { alt: "manicure--2", className: 'thumbnail--3' },
     { alt: "manicure--3", className: 'thumbnail--4' },
     { alt: "manicure--4", className: 'thumbnail--5' },
+    { alt: "manicure--4", className: 'thumbnail--6' },
+    { alt: "manicure--4", className: 'thumbnail--7' },
+    { alt: "manicure--4", className: 'thumbnail--8' },
+    { alt: "manicure--4", className: 'thumbnail--9' },
+    { alt: "manicure--4", className: 'thumbnail--10' },
+    { alt: "manicure--4", className: 'thumbnail--11' },
+    { alt: "manicure--4", className: 'thumbnail--12' },
+    { alt: "manicure--4", className: 'thumbnail--13' },
+    { alt: "manicure--4", className: 'thumbnail--14' },
+    { alt: "manicure--4", className: 'thumbnail--15' },
+    { alt: "manicure--4", className: 'thumbnail--16' },
+    { alt: "manicure--4", className: 'thumbnail--17' },
+    { alt: "manicure--4", className: 'thumbnail--18' },
+    { alt: "manicure--4", className: 'thumbnail--19' },
   ]
 }
 
