@@ -14,7 +14,7 @@ export default function ServicesListItem({ procedure, key }) {
 
   return (
     <li key={key} className={pricelist.serviceListItem}>
-      <div><span>{procedure.name} {`${procedure.price} zł`}</span> <a onClick={accordionAction}><AiOutlinePlus /></a></div>
+      <div><span>{procedure.name} {`${procedure.price} zł`}</span> <a onClick={accordionAction} className={`accordionBtn--hidden__${isHidden}`}><AiOutlinePlus /></a></div>
       {isHidden ? null : <div>{procedure.description}</div>}
     </li>
   );

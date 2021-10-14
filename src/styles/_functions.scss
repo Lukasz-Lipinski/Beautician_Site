@@ -16,3 +16,7 @@
   transition: all 0.4s;
 }
 
+@mixin rotateSymbol($deg) {
+  transform: rotateZ($deg+deg);
+  transition: transform 0.4s;
+}

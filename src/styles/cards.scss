@@ -16,9 +16,9 @@
       @extend %card;
       @include fadeInElement(0.3s, 1*$i);
       @if $i == 1 {
-        @include cardsBackground('./pictures/card--image__#{$i}.jpeg');
+        @include cardsBackground('../Pages/PriceList/pictures/card--image__#{$i}.jpeg');
       }
-      @else{ @include cardsBackground('./pictures/card--image__#{$i}.jpg');}
+      @else{ @include cardsBackground('../Pages/PriceList/pictures/card--image__#{$i}.jpg');}
       @if $i == 3 {
         text-align: center;
       }

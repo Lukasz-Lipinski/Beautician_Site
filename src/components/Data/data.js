@@ -11,6 +11,10 @@ const data = {
       container: 'contact_container',
       address: 'address',
       contactForm: 'contactForm'
+    },
+    gallery: {
+      thumbnail: 'thumbnail',
+      modalImage: 'modalImage'
     }
   },
   linksName: [
@@ -73,9 +77,16 @@ const data = {
   ],
   contacts: {
 
-  }
+  },
+  galleryImg: [
+    { alt: "manicure--1", className: 'thumbnail--0' },
+    { alt: "haircut--1", className: 'thumbnail--1' },
+    { alt: "haircut--2", className: 'thumbnail--2' },
+    { alt: "manicure--2", className: 'thumbnail--3' },
+    { alt: "manicure--3", className: 'thumbnail--4' },
+    { alt: "manicure--4", className: 'thumbnail--5' },
+  ]
 }
-
 
 export default data;
 

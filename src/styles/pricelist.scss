@@ -1,6 +1,7 @@
 @use 'variables' as *;
 @use 'classess' as *;
 @use 'animations' as*;
+@use 'functions' as *;
 
 .container {
   @extend %displayFlex;
@@ -42,8 +43,12 @@
       font-size: 26px;
     }
 
-    a:active {
-      animation: rotateCross 0.1s forwards;
+    .accordionBtn--hidden__false {
+      @include rotateSymbol(180);
+    }
+
+    .accordionBtn--hidden__true {
+      @include rotateSymbol(-180);
     }
 
     .serviceListItem {
@@ -54,12 +59,18 @@
       padding: 10px 15px;
       margin: 4px 0;
       border-radius: 15px;
-      width: 1200px;
+      width: 80vw;
 
       div {
         display: flex;
         justify-content: space-between;
+        padding: 10px 5px;
+        span {
+          display: inherit;
+          align-items: center;
+        }
       }
+
     }
 
     .serviceListItem:hover {
