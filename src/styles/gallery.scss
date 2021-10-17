@@ -21,8 +21,8 @@
       border-left: 6px solid $primary-color-light;
       border-bottom: 6px solid $primary-color-dark;
       border-right: 6px solid $primary-color-dark;
-      width: 15vw;
-      height: 25vh;
+      width: 240px;
+      height: 160px;
       content: url('../Pages/Gallery/gallery/gallery__'+#{$i}+'.jpg');
     }
 

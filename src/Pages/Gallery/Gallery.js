@@ -9,7 +9,7 @@ export default function Gallery() {
 
   return (
     <div className='container'>
-      {galleryImg.map(img => <Thumbnail className={img.className} alt={img.alt} />)}
+      {galleryImg.map((img, index) => <Thumbnail key={`gallery-img-${index}`} className={img.className} alt={img.alt} />)}
     </div>
   )
 }
