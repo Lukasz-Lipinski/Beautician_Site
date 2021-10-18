@@ -11,7 +11,7 @@ export default function Menu_links() {
   return (
     <div className={`${classess.menuNav}`}>
       <div className={`${classess.menuNav}__logo`}>
-        <img url='./pictures/Logo.png' alt="logo" />
+        <img src='./pictures/Logo.png' alt="logo" />
       </div>
       <div className={`${classess.menuNav}__links`}>
         {linksName.map((link, index) => {

@@ -1,31 +1,30 @@
 import React from "react";
-import dataContext from "../../../../components/Data/dataContext";
 import { connect } from 'react-redux';
 import { setModalWindowGalleryOnTrue } from '../../redux';
+
+import dataContext from "../../../../components/Data/dataContext";
 
 class Thumbnail extends React.Component {
 
   static contextType = dataContext;
 
   clicked = (e) => {
-    console.log(e.target);
+    this.props.showModalImg();
   }
 
   render() {
-    const { className, alt, src, setModalImg } = this.props;
+    const { className, alt } = this.props;
 
-    console.log(this.props.value);
     return (
-      <img className={className} alt={alt} src={src} onClick={this.clicked} />
+      <img className={className} alt={alt} onClick={this.clicked} />
     )
   }
 }
 
 const mapStateToProps = (state) => ({
-  value: state.modal
 });
 const mapDispatchToProps = (dispatch) => ({
-  setModalImg: () => { dispatch(setModalWindowGalleryOnTrue()) }
+  showModalImg: () => { dispatch(setModalWindowGalleryOnTrue()) }
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Thumbnail);

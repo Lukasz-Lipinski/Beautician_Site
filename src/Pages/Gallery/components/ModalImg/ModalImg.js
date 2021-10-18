@@ -1,14 +1,28 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { connect } from 'react-redux';
+import { setModalWindowGalleryOnFalse } from '../../redux';
 
-function ModalImg() {
+import dataContext from '../../../../components/Data/dataContext';
+import '../../../../styles/modalImg.scss';
+
+function ModalImg({ flag, hideModalImg }) {
+  const data = useContext(dataContext);
+  const { classess } = data;
+  const { gallery } = classess;
   return (
-    <>
-      <img className="" alt="" />
-    </>
+    <div className={gallery.modalImage}>
+      <a onClick={hideModalImg}>&times;</a>
+      <img alt="" />
+    </div>
   )
 };
 
-export default ModalImg;
+const mapStateToProps = (state) => ({
+  flag: state.modal,
+})
 
+const mapDispatchToProps = (dispatch) => ({
+  hideModalImg: () => dispatch(setModalWindowGalleryOnFalse())
+})
 
-//dokonczyc
+export default connect(mapStateToProps, mapDispatchToProps)(ModalImg);

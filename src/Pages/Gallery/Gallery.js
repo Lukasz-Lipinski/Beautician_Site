@@ -1,15 +1,19 @@
 import { useContext } from 'react';
-import dataContext from '../../components/Data/dataContext';
-import Thumbnail from './components/Thumbnail/Thumbnail';
+import { connect } from 'react-redux';
 import '../../styles/gallery.scss';
 
-export default function Gallery() {
+import dataContext from '../../components/Data/dataContext';
+import Thumbnail from './components/Thumbnail/Thumbnail';
+
+function Gallery() {
   const data = useContext(dataContext);
   const { galleryImg } = data;
 
   return (
     <div className='container'>
-      {galleryImg.map((img, index) => <Thumbnail key={`gallery-img-${index}`} className={img.className} alt={img.alt} />)}
+      {galleryImg.map((img, index) => <Thumbnail key={`gallery-img-${index}`} className={`${img.className} gallery__${index}`} alt={`${img.className} gallery__${index}`} />)}
     </div>
   )
-}
+};
+
+export default Gallery;

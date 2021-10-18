@@ -1,39 +1,47 @@
 import React, { Suspense } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
-import Reducer from './Pages/Gallery/redux.js';
+import { connect } from 'react-redux';
+
 
 import Footer from './components/Footer/Footer';
 import { Menu } from './components/Menu';
+import { ModalImg } from './Pages/Gallery/components/ModalImg';
+
 import dataContext from './components/Data/dataContext';
 import data from './components/Data/data';
 
 import './styles/style.scss';
 
-const store = createStore(Reducer);
 
 const Body = React.lazy(() => import('./components/Body/Body'));
 
-function App() {
+function App({ isModalImgHidden }) {
   return (
-    <Provider store={store}>
-      <div className="container">
-        <dataContext.Provider value={data}>
-          <Menu />
+    <div className="container">
+      <dataContext.Provider value={data}>
+        {isModalImgHidden && <ModalImg />}
 
-          <Suspense fallback="loading...">
-            <Switch>
-              <Route exact path='/:page' component={Body} />
-            </Switch>
-          </Suspense>
-        </dataContext.Provider>
+        <Menu />
 
-        <Footer className="footer" />
-      </div>
-    </Provider>
+        <Suspense fallback="loading...">
+          <Switch>
+            <Route exact path='/:page' component={Body} />
+          </Switch>
+        </Suspense>
+      </dataContext.Provider>
+
+      <Footer className="footer" />
+    </div>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => ({
+  isModalImgHidden: state.modal
+});
+
+const mapDispatchToProps = (dispatch) => ({
+
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
