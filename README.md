@@ -4,7 +4,9 @@ This project has been taken patter from kasun (beautician).
 
 ## needed extensions
   npm install sass | 
-  npm install react-router-dom
+  npm install react-router-dom |
+  npm install redux | 
+  npm install react-redux
   
 ## information
 
