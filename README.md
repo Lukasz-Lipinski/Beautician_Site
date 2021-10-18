@@ -1,4 +1,4 @@
-# FingerNails - site
+# Beautician_Site
 
 This project has been taken patter from kasun (beautician).
 
