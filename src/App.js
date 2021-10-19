@@ -2,16 +2,14 @@ import React, { Suspense } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import { connect } from 'react-redux';
-
-
-import Footer from './components/Footer/Footer';
-import { Menu } from './components/Menu';
-import { ModalImg } from './Pages/Gallery/components/ModalImg';
+import './styles/style.scss';
 
 import dataContext from './components/Data/dataContext';
 import data from './components/Data/data';
 
-import './styles/style.scss';
+import { Home } from './Pages';
+import { Menu, Footer, ModalImg } from './components';
+
 
 
 const Body = React.lazy(() => import('./components/Body/Body'));
@@ -27,6 +25,9 @@ function App({ isModalImgHidden }) {
         <Suspense fallback="loading...">
           <Switch>
             <Route exact path='/:page' component={Body} />
+            <Route path="*">
+              <Home />
+            </Route>
           </Switch>
         </Suspense>
       </dataContext.Provider>

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import MenuCards from "../../components/Body/Cards/MenuCards";
+import MenuCards from "../../components/Cards/MenuCards";
 import dataContext from "../../components/Data/dataContext";
 import '../../styles/sites.scss';
 

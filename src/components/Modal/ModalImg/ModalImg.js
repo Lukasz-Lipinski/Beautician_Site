@@ -1,24 +1,24 @@
 import React, { useContext } from 'react';
 import { connect } from 'react-redux';
-import { setModalWindowGalleryOnFalse } from '../../redux';
+import { setModalWindowGalleryOnFalse } from '../../../Pages/Gallery/redux';
 
-import dataContext from '../../../../components/Data/dataContext';
-import '../../../../styles/modalImg.scss';
+import dataContext from '../../Data/dataContext';
+import '../../../styles/modalImg.scss';
 
-function ModalImg({ flag, hideModalImg }) {
+function ModalImg({ hideModalImg, ImgNumber }) {
   const data = useContext(dataContext);
   const { classess } = data;
   const { gallery } = classess;
   return (
     <div className={gallery.modalImage}>
       <a onClick={hideModalImg}>&times;</a>
-      <img alt="" />
+      <img className={ImgNumber} alt={ImgNumber} />
     </div>
   )
 };
 
 const mapStateToProps = (state) => ({
-  flag: state.modal,
+  ImgNumber: state.ImgNumber,
 })
 
 const mapDispatchToProps = (dispatch) => ({

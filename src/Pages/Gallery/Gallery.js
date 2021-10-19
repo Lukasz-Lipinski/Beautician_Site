@@ -11,7 +11,7 @@ function Gallery() {
 
   return (
     <div className='container'>
-      {galleryImg.map((img, index) => <Thumbnail key={`gallery-img-${index}`} className={`${img.className} gallery__${index}`} alt={`${img.className} gallery__${index}`} />)}
+      {galleryImg.map((img, index) => <Thumbnail key={`gallery-img-${index}`} className={`${img.className} gallery__${index}`} alt={`${img.alt}${index}`} />)}
     </div>
   )
 };

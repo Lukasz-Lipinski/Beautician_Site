@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { Card } from './Card';
 import Cards from './Cards';
-import '../../../styles/cards.scss';
+import '../../styles/cards.scss';
 
 export default function MenuCards() {
 
@@ -12,7 +12,8 @@ export default function MenuCards() {
     { title: "zabiegi na dlonie i paznokcie", name: 'zabiegi_na_dlonie_i_paznokcie' },
     { title: "zabiegi dla panów", name: 'zabiegi_dla_panów' },
     { title: "zabiegi na włosy", name: 'zabiegi_na_włosy' },
-  ])
+  ],
+    []);
 
   return (
     <Cards className="cards">

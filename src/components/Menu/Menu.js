@@ -1,9 +1,9 @@
-import { useContext } from 'react';
+import { useContext, useMemo } from 'react';
 import { NavLink } from 'react-router-dom';
 import dataContext from '../Data/dataContext';
 
 export default function Menu_links() {
-  const active = { color: '#8cd425' };
+  const active = useMemo(() => ({ color: '#8cd425' }), []);
 
   const data = useContext(dataContext);
   const { linksName, classess } = data;
@@ -11,7 +11,7 @@ export default function Menu_links() {
   return (
     <div className={`${classess.menuNav}`}>
       <div className={`${classess.menuNav}__logo`}>
-        <img src='./pictures/Logo.png' alt="logo" />
+        <img alt="logo" />
       </div>
       <div className={`${classess.menuNav}__links`}>
         {linksName.map((link, index) => {
