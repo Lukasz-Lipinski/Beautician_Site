@@ -9,7 +9,7 @@ export default function Menu_links() {
   const { linksName, classess } = data;
 
   return (
-    <div className={`${classess.menuNav}`}>
+    <div className={`${classess.menuNav}`} id="top">
       <div className={`${classess.menuNav}__logo`}>
         <img alt="logo" />
       </div>

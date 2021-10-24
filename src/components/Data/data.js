@@ -2,6 +2,8 @@ const data = {
   classess: {
     container: 'container',
     menuNav: 'nav',
+    spinner: 'spinner',
+    backToTop: 'backToTop',
     pricelist: {
       pricelistNavigation: 'pricelistNavigation',
       serviceList: 'serviceList',

@@ -30,14 +30,24 @@ function FormHOC(WrappedComponent) {
         console.log('error msg');
       }
       if (!this.state.valueNameAndSurname) {
-        console.log('error valueNameAndSurname');
+        console.log('error valueNameAndSurname')
       }
     }
 
-
     onSubmit = (e) => {
-      e.preventDefault();
       this.validation();
+
+      fetch(`https://${process.env.REACT_APP_CONTACT}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: {},
+      })
+        .then(response => {
+          if (!response.ok) {
+            console.log('success');
+          }
+        });
+      e.preventDefault();
     }
 
     render() {

@@ -8,7 +8,7 @@ import dataContext from './components/Data/dataContext';
 import data from './components/Data/data';
 
 import { Home } from './Pages';
-import { Menu, Footer, ModalImg } from './components';
+import { Menu, Footer, ModalImg, Spinner } from './components';
 
 
 
@@ -17,12 +17,12 @@ const Body = React.lazy(() => import('./components/Body/Body'));
 function App({ isModalImgHidden }) {
   return (
     <div className="container">
+
       <dataContext.Provider value={data}>
         {isModalImgHidden && <ModalImg />}
-
         <Menu />
 
-        <Suspense fallback="loading...">
+        <Suspense fallback={<Spinner />}>
           <Switch>
             <Route exact path='/:page' component={Body} />
             <Route path="*">
@@ -30,6 +30,7 @@ function App({ isModalImgHidden }) {
             </Route>
           </Switch>
         </Suspense>
+
       </dataContext.Provider>
 
       <Footer className="footer" />

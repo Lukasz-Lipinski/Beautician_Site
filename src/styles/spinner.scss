@@ -1,0 +1,9 @@
+@use 'animations' as *;
+@use 'functions' as *;
+@use 'variables' as *;
+@use 'classess' as*;
+
+.spinner {
+  font-size: 30px;
+  animation: fadeIn 1s ease-in-out infinite;
+}

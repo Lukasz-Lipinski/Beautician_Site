@@ -32,7 +32,7 @@ function Form(props) {
       </div>
 
       <span>
-        <button onClick={onClickSend}>Wyślij</button>
+        <button type="submit" onClick={onClickSend}>Wyślij</button>
       </span>
     </form>
   )

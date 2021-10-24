@@ -7,6 +7,7 @@ import { BiPhone } from 'react-icons/bi';
 import { IoMailOutline } from 'react-icons/io5';
 
 import '../../styles/contact.scss';
+import { BackToTop } from '../../components';
 
 
 export default function Contact() {

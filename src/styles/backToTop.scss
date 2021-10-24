@@ -1,0 +1,31 @@
+@use 'animations' as *;
+@use 'functions' as *;
+@use 'variables' as *;
+@use 'classess' as*;
+
+.backToTop {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  width: 30px;
+  height: 30px;
+  padding: 6px;
+  z-index: 2;
+  margin-left: 93vw;
+  border-radius: 6px;
+  background-color: $primary-color-dark;
+  @extend %displayFlex;
+  justify-content: center;
+  align-items: center;
+  transition: all $fadeInTime;
+
+  a {
+    color: $white;
+    font-size: 24px;
+  }
+}
+
+.backToTop:hover {
+  background-color: $primary-color-light;
+  transition: background-color $fadeInTime;
+}
