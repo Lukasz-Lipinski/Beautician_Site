@@ -7,7 +7,7 @@ import dataContext from '../../components/Data/dataContext';
 
 import '../../styles/pricelist.scss'
 import ServicesList from './ServicesList/ServicesList';
-import { BackToTop } from '../../components';
+import { Snackbar } from '../../components';
 
 export default function PriceList() {
   const data = useContext(dataContext);
@@ -25,7 +25,7 @@ export default function PriceList() {
         <ServicesList />
 
       </div>
-      <BackToTop />
+      <Snackbar />
     </>
 
   )

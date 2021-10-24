@@ -3,7 +3,7 @@ import '../../styles/gallery.scss';
 
 import dataContext from '../../components/Data/dataContext';
 import Thumbnail from './components/Thumbnail/Thumbnail';
-import { BackToTop } from '../../components';
+import { Snackbar } from '../../components';
 
 function Gallery() {
   const data = useContext(dataContext);
@@ -15,7 +15,7 @@ function Gallery() {
         {galleryImg.map((img, index) => <Thumbnail key={`gallery-img-${index}`} className={`${img.className} gallery__${index}`} alt={`${img.alt}${index}`} />)}
       </div>
 
-      <BackToTop />
+      <Snackbar />
     </>
 
   )
