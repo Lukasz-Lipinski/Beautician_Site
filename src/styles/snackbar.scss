@@ -3,7 +3,7 @@
 @use 'variables' as *;
 @use 'classess' as*;
 
-.backToTop {
+.snackbar {
   position: -webkit-sticky;
   position: sticky;
   bottom: 10px;
@@ -26,7 +26,7 @@
   }
 }
 
-.backToTop:hover {
+.snackbar:hover {
   background-color: $primary-color-light;
   transition: background-color $fadeInTime;
 }
