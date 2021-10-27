@@ -1,10 +1,12 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import dataContext from '../../components/Data/dataContext';
 import '../../styles/specialloffers.scss';
 
+import { SpecialOffersListElement } from '../../components/';
+
 export default function SpecialOffers() {
   const data = useContext(dataContext);
-  const { classess } = data;
+  const { classess, specialOffersListElement } = data;
   const { specialoffers } = classess;
 
   return (
@@ -12,19 +14,18 @@ export default function SpecialOffers() {
       <h1>Promocje</h1>
       <p>Sprawdź co dla Ciebie przygotowaliśmy w okazyjnych cenach!</p>
       <div className={`${specialoffers}--content`}>
-        <img alt="logo" />
-          <div>
-            opcja 1
-            <span> zdjecie </span>
-            opcja2
-          </div>
+        <img className={`${specialoffers}--content__logo`} alt="logo" />
 
-          <div>
-            zdjecie
-            <span> opcja3 </span>
-            zdjecie
-          </div>
-          
+        {
+          specialOffersListElement.map((el, index) => (
+            <SpecialOffersListElement
+              index={index + 1}
+              firstDescription={el.firstDescription}
+              secondDescription={el.secondDescription}
+            />
+          ))
+        }
+
       </div>
     </div>
   )

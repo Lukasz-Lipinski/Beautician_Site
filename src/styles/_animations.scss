@@ -1,8 +1,22 @@
+@use 'variables' as *;
+
 @keyframes fadeIn {
   0%{
     opacity: 0;
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes flashingHeader {
+  0% {
+    color: $primary-color-dark;
+  }
+  50% {
+    color:$primary-color-light;
+  }
+  100% {
+    color: $primary-color-dark;
   }
 }

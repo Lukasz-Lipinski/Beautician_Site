@@ -4,23 +4,46 @@
 @use 'classess' as*;
 
 .specialoffers {
+  opacity: 0;
   @extend %displayFlex;
   flex-direction: column;
   align-items: center;
+  padding-inline: 6vw;
+  animation: fadeIn 0.3s ease-in forwards 0.1s normal;
+
+  h1 {
+    animation: flashingHeader 1s linear 0.3s infinite normal none;
+  }
+
   p {
     margin-bottom: 50px;
   }
 
   &--content{
+    min-width: 60vw;
+    max-width: 65vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: $white;
-    min-width: 80vw;
+    border: 4px solid black;
+    border-radius: 20px;
 
-      img {
+      &__logo {
         content: url('../components/Menu/pictures/Logo.png');
-        max-width: 40vw;
+        min-width: 40vw;
+        max-width: 50vw;
+      }
+
+      &--specialOffersList {
+        padding: 1em;
+
+        span {
+          display: inline-block;
+        }
+        img {
+          display: inline-block;
+        }
       }
   }
 }

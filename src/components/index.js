@@ -6,4 +6,4 @@ export { default as GalleryImg } from './GalleryImg/GalleryImg';
 export { default as MenuCards } from './Cards/MenuCards';
 export { default as Spinner } from './Spinner/Spinner';
 export { default as Snackbar } from './Snackbar';
-export { default as SpecialOffersList } from './SpecialOffersList/SpecialOffersList';
+export { default as SpecialOffersListElement } from './SpecialOffersList/SpecialOffersListElement';
