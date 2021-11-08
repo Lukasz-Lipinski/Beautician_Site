@@ -5,7 +5,7 @@
 
 .modalImage {
   animation: fadeIn forwards 0.5s;
-  position: absolute;
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,17 +36,34 @@
     @if($i == 3) {
       .gallery--img--#{$i} {
         width: 25vw;
-        height: auto;
         border: 20px solid $white;
         content: url('../Pages/Gallery/gallery/gallery__'+#{$i}+'.jpg');
       }
     } @else {
       .gallery--img--#{$i} {
-        width: 45vw;
-        height: auto;
+        width: 50vw;
         border: 20px solid $white;
         content: url('../Pages/Gallery/gallery/gallery__'+#{$i}+'.jpg');
       }
     }
   }
+
+  @media only screen and (max-width: 600px) {
+    @for $i from 0 to 20 {
+      @if($i == 3) {
+        .gallery--img--#{$i} {
+          width: 60vw;
+          border: 10px solid $white;
+          content: url('../Pages/Gallery/gallery/gallery__'+#{$i}+'.jpg');
+        }
+      } @else {
+        .gallery--img--#{$i} {
+          width: 75vw;
+          border: 10px solid $white;
+          content: url('../Pages/Gallery/gallery/gallery__'+#{$i}+'.jpg');
+        }
+      }
+    }
+  }
 }
+

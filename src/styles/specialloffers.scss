@@ -44,6 +44,17 @@
         img {
           display: inline-block;
         }
+
+        @for $i from 0 through 4 {
+          &__img#{$i} {
+            content: url('../components/SpecialOffersList/pictures/specialOffersListImage--img--'+ #{$i} +'.jpg');
+            max-width: 25vw;
+          }
+          &__img#{$i+5} {
+            content: url('../components/SpecialOffersList/pictures/specialOffersListImage--img--'+ #{$i+5} +'.jpg');
+            max-width: 25vw;
+          }
+        }
       }
   }
 }

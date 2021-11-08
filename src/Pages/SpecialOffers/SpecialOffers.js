@@ -19,9 +19,11 @@ export default function SpecialOffers() {
         {
           specialOffersListElement.map((el, index) => (
             <SpecialOffersListElement
-              index={index + 1}
+              index={index}
               firstDescription={el.firstDescription}
               secondDescription={el.secondDescription}
+              firstPrice={el.firstPrice}
+              secondPrice={el.secondPrice}
             />
           ))
         }

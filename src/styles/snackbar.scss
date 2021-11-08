@@ -5,11 +5,10 @@
 
 .snackbar {
   opacity: 0;
-  position: -webkit-sticky;
   position: sticky;
   bottom: 10px;
-  width: 30px;
-  height: 30px;
+  min-width: 30px;
+  min-height: 30px;
   padding: 6px;
   z-index: 1;
   margin-left: 93vw;
