@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import { Contact, Gallery, Home, PriceList, Reservation, SpecialOffers } from '../../Pages';
 import { useCallback } from 'react';
 
-function Body() {
+export default function Body() {
   const { page } = useParams();
 
   const returnPage = useCallback((page) => {
@@ -25,4 +25,3 @@ function Body() {
   return returnPage(page);
 };
 
-export default Body;

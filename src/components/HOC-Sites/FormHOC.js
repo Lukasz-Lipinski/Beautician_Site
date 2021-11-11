@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { checkTheDate, checkTheValue } from './functionsValidation';
 
 
 function FormHOC(WrappedComponent) {
@@ -7,7 +8,7 @@ function FormHOC(WrappedComponent) {
       valueNameAndSurname: '',
       valueEmail: '',
       valueMsg: '',
-
+      valueDate: '',
     }
 
     onChangeNameAndSurname = (e) => {
@@ -22,16 +23,13 @@ function FormHOC(WrappedComponent) {
       this.setState({ valueMsg: e.target.value });
     }
 
+    onChangeDate = (e) => {
+      this.setState({ valueDate: e.target.value });
+    }
+
     validation = () => {
-      if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(this.state.valueEmail)) {
-        console.log("error email");
-      }
-      if (!this.state.valueMsg) {
-        console.log('error msg');
-      }
-      if (!this.state.valueNameAndSurname) {
-        console.log('error valueNameAndSurname')
-      }
+      checkTheDate(this.state);
+      checkTheValue(this.state);
     }
 
     onSubmit = (e) => {
@@ -51,7 +49,7 @@ function FormHOC(WrappedComponent) {
     }
 
     render() {
-      const { valueNameAndSurname, valueEmail, valueMsg } = this.state;
+      const { valueNameAndSurname, valueEmail, valueMsg, valueDate } = this.state;
       return <WrappedComponent
         {...this.props}
         onChangeNameAndSurname={this.onChangeNameAndSurname}
@@ -60,6 +58,8 @@ function FormHOC(WrappedComponent) {
         valueEmail={valueEmail}
         onChangeMsg={this.onChangeMsg}
         valueMsg={valueMsg}
+        onChangeDate={this.onChangeDate}
+        valueDate={valueDate}
         onSubmit={this.onSubmit}
       />
     }

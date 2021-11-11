@@ -11,12 +11,12 @@ export default function SpecialOffersListElement(props) {
   console.log(secondDescription);
 
   return (
-    <div className={`${specialoffers}--content--specialOffersList`} style={{ border: '1px solid black' }}>
-      {index % 2 ? <img className={`${specialoffers}--content--specialOffersList__img${index}`} alt={`imageRight--${index}`} /> : <span>{firstDescription} {`cena: ${firstPrice}`}</span>}
+    <div className={`${specialoffers}--content--specialOffersList`} >
+      {index % 2 ? <img className={`${specialoffers}--content--specialOffersList__img${index}`} alt={`imageRight--${index}`} /> : <p>{firstDescription} {`cena: ${firstPrice}`}</p>}
 
-      {!(index % 2) ? <img className={`${specialoffers}--content--specialOffersList__img${index}`} alt={`imageMiddle--${index}`} /> : <span>{firstDescription} {`cena: ${firstPrice}`}</span>}
+      {!(index % 2) ? <img className={`${specialoffers}--content--specialOffersList__img${index}`} alt={`imageMiddle--${index}`} /> : <p>{firstDescription} {`cena: ${firstPrice}`}</p>}
 
-      {index % 2 ? <img className={`${specialoffers}--content--specialOffersList__img${index+5}`} alt={`imageLeft--${index+5}`} /> : <span>{secondDescription} {`cena: ${secondPrice}`}</span>}
+      {index % 2 ? <img className={`${specialoffers}--content--specialOffersList__img${index + 5}`} alt={`imageLeft--${index + 5}`} /> : <p>{secondDescription} {`cena: ${secondPrice}`}</p>}
 
     </div>
   )

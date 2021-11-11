@@ -18,7 +18,8 @@ const data = {
     gallery: {
       thumbnail: 'thumbnail',
       modalImage: 'modalImage'
-    }
+    },
+    reservation: "reservation"
   },
   linksName: [
     { link: "Strona główna", src: "home", componentName: 'Home' },
