@@ -3,10 +3,6 @@ const INIT_STATE = {
   valueEmail: '',
   valueMsg: '',
   valueDate: '',
-  emailIsRequired: false,
-  nameAndSurnameIsRequired: false,
-  msgIsRequired: false,
-  dateIsRequired: false
 }
 
 export const checkTheDate = (state = INIT_STATE) => {
@@ -16,21 +12,28 @@ export const checkTheDate = (state = INIT_STATE) => {
   const currDay = String(currDate.getDate());
   const fullDate = `${currYear}-${currMonth}-${currDay}`;
 
-  if (state.valueDate < fullDate) {
-    console.log("wybrany dzień już minął");
-  };
+  if (state.valueDate < fullDate) return false;
+
+  return true;
 };
 
-export const checkTheValue = (state = INIT_STATE) => {
+export const checkTheEmail = (state = INIT_STATE) => {
   if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(state.valueEmail)) {
-    console.log("error email");
+    return false;
   };
+  return true;
+};
 
-  if (!state.valueMsg) {
-    console.log('error msg');
-  };
-
+export const checkTheNameAndSurname = (state = INIT_STATE) => {
   if (!state.valueNameAndSurname) {
-    console.log('error valueNameAndSurname');
+    return false;
   };
+  return true;
+}
+
+export const checkTheMsg = (state = INIT_STATE) => {
+  if (!state.valueMsg) {
+    return false;
+  };
+  return true;
 }

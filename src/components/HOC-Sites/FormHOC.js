@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { checkTheDate, checkTheValue } from './functionsValidation';
+import { checkTheDate, checkTheEmail, checkTheNameAndSurname, checkTheMsg } from './functionsValidation';
 
 
 function FormHOC(WrappedComponent) {
@@ -9,10 +9,10 @@ function FormHOC(WrappedComponent) {
       valueEmail: '',
       valueMsg: '',
       valueDate: '',
-      emailIsRequired: false,
-      nameAndSurnameIsRequired: false,
-      msgIsRequired: false,
-      dateIsRequired: false
+      emailIsRequired: true,
+      nameAndSurnameIsRequired: true,
+      msgIsRequired: true,
+      dateIsRequired: true
     }
 
     onChangeNameAndSurname = (e) => {
@@ -32,11 +32,25 @@ function FormHOC(WrappedComponent) {
     }
 
     validation = () => {
-      checkTheDate(this.state);
-      checkTheValue(this.state);
+      if (checkTheDate(this.state)) {
+        this.setState({ dateIsRequired: true });
+      } else this.setState({ dateIsRequired: false });
+
+      if (checkTheEmail(this.state)) {
+        this.setState({ emailIsRequired: true });
+      } else this.setState({ emailIsRequired: false });
+
+      if (checkTheNameAndSurname(this.state)) {
+        this.setState({ nameAndSurnameIsRequired: true });
+      } else this.setState({ nameAndSurnameIsRequired: false });
+
+      if (checkTheMsg(this.state)) {
+        this.setState({ msgIsRequired: true });
+      } else this.setState({ msgIsRequired: false });
     }
 
     onSubmit = (e) => {
+      e.preventDefault();
       this.validation();
 
       fetch(`https://${process.env.REACT_APP_CONTACT}`, {
@@ -49,7 +63,6 @@ function FormHOC(WrappedComponent) {
             console.log('success');
           }
         });
-      e.preventDefault();
     }
 
     render() {
@@ -57,18 +70,26 @@ function FormHOC(WrappedComponent) {
         valueNameAndSurname,
         valueEmail,
         valueMsg,
-        valueDate } = this.state;
+        valueDate,
+        dateIsRequired,
+        emailIsRequired,
+        nameAndSurnameIsRequired,
+        msgIsRequired } = this.state;
 
       return <WrappedComponent
         {...this.props}
         onChangeNameAndSurname={this.onChangeNameAndSurname}
         valueNameAndSurname={valueNameAndSurname}
+        nameAndSurnameIsRequired={nameAndSurnameIsRequired}
         onChangeEmail={this.onChangeEmail}
         valueEmail={valueEmail}
+        emailIsRequired={emailIsRequired}
         onChangeMsg={this.onChangeMsg}
         valueMsg={valueMsg}
+        msgIsRequired={msgIsRequired}
         onChangeDate={this.onChangeDate}
         valueDate={valueDate}
+        dateIsRequired={dateIsRequired}
         onSubmit={this.onSubmit}
       />
     }

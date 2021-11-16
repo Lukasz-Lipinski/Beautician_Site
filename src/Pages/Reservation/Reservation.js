@@ -18,24 +18,31 @@ function Reservation(props) {
     valueEmail,
     onSubmit,
     onChangeDate,
-    valueDate  } = props;
+    valueDate,
+    dateIsRequired,
+    msgIsRequired,
+    nameAndSurnameIsRequired,
+    emailIsRequired } = props;
 
   return (
     <>
       <form onSubmit={onSubmit} className={reservation}>
         <div>
           <label htmlFor='#NameAndSurname'>Imię i nazwisko:</label>
-          <input id="NameAndSurname" type="text" onChange={onChangeNameAndSurname} value={valueNameAndSurname} />
+          <input className={`isValid--${nameAndSurnameIsRequired}`} id="NameAndSurname" type="text" onChange={onChangeNameAndSurname} value={valueNameAndSurname} />
+          {nameAndSurnameIsRequired ? null : <p>Pole wymagane</p>}
         </div>
 
         <div>
           <label htmlFor='#emailAddress'>Adres email:</label>
-          <input id="emailAddress" type="text" onChange={onChangeEmail} value={valueEmail} />
+          <input className={`isValid--${emailIsRequired}`} id="emailAddress" type="text" onChange={onChangeEmail} value={valueEmail} />
+          {emailIsRequired ? null : <p>Pole wymagane</p>}
         </div>
 
         <div>
           <label htmlFor='#reservationDay'>Dzień wizyty:</label>
-          <input id="reservationDays" type="date" onChange={onChangeDate} value={valueDate} />
+          <input className={`isValid--${dateIsRequired}`} id="reservationDays" type="date" onChange={onChangeDate} value={valueDate} />
+          {dateIsRequired ? null : <p>Pole wymagane</p>}
         </div>
 
 

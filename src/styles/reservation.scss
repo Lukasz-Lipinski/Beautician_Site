@@ -25,10 +25,19 @@
     padding: 16px;
     animation: fadeIn 0.3s ease-in forwards 0.1s normal;
 
+    input.isValid--false {
+      border-color: red;
+    }
+
     div {
       @extend %displayFlex;
       justify-content: center;
       padding-block: 1vh;
+
+      p {
+        color: red;
+        font-weight: bold;
+      }
 
       label {
         padding-inline: 4vw;
