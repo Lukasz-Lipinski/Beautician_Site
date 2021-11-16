@@ -9,6 +9,10 @@ function FormHOC(WrappedComponent) {
       valueEmail: '',
       valueMsg: '',
       valueDate: '',
+      emailIsRequired: false,
+      nameAndSurnameIsRequired: false,
+      msgIsRequired: false,
+      dateIsRequired: false
     }
 
     onChangeNameAndSurname = (e) => {
@@ -49,7 +53,12 @@ function FormHOC(WrappedComponent) {
     }
 
     render() {
-      const { valueNameAndSurname, valueEmail, valueMsg, valueDate } = this.state;
+      const {
+        valueNameAndSurname,
+        valueEmail,
+        valueMsg,
+        valueDate } = this.state;
+
       return <WrappedComponent
         {...this.props}
         onChangeNameAndSurname={this.onChangeNameAndSurname}

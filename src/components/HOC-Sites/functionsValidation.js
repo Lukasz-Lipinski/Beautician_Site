@@ -3,6 +3,10 @@ const INIT_STATE = {
   valueEmail: '',
   valueMsg: '',
   valueDate: '',
+  emailIsRequired: false,
+  nameAndSurnameIsRequired: false,
+  msgIsRequired: false,
+  dateIsRequired: false
 }
 
 export const checkTheDate = (state = INIT_STATE) => {

@@ -70,19 +70,11 @@
       width: 100%;
       justify-content:  center;
       button {
-        position: relative;
-        margin-top: 40px;
-        padding: 14px 20px;
-        border: none;
-        color: $primary-color-dark;
-        outline: 3px solid $primary-color-dark;
-        background-color: $white;
-        font-size: 20px;
+        @extend %btn;
       }
   
       button:hover {
-        color: $white;
-        background-color: $primary-color-dark;
+        @extend %btn--hover;
       }
     }
   }

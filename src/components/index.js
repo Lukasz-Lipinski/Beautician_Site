@@ -7,3 +7,4 @@ export { default as MenuCards } from './Cards/MenuCards';
 export { default as Spinner } from './Spinner/Spinner';
 export { default as Snackbar } from './Snackbar';
 export { default as SpecialOffersListElement } from './SpecialOffersList/SpecialOffersListElement';
+export { default as Address } from './Address';
