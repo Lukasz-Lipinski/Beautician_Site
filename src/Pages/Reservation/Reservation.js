@@ -20,7 +20,6 @@ function Reservation(props) {
     onChangeDate,
     valueDate,
     dateIsRequired,
-    msgIsRequired,
     nameAndSurnameIsRequired,
     emailIsRequired } = props;
 

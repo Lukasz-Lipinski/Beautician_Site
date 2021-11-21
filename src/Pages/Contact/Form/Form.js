@@ -11,24 +11,29 @@ function Form(props) {
     valueMsg,
     onChangeMsg,
     onFocusMsg,
-    onClickSend
-  } = props;
+    onClickSend,
+    emailIsRequired,
+    nameAndSurnameIsRequired,
+    msgIsRequired } = props;
 
   return (
     <form className={className} onSubmit={onSubmit}>
       <div>
         <label htmlFor="nameAndSurname">Imię i nazwisko:</label>
-        <input id="nameAndSurname" type="text" value={valueNameAndSurname} onChange={onChangeNameAndSurname} />
+        <input className={`isValid--${nameAndSurnameIsRequired}`} id="nameAndSurname" type="text" value={valueNameAndSurname} onChange={onChangeNameAndSurname} />
+        {nameAndSurnameIsRequired ? null : <p>Wymagane pole</p>}
       </div>
 
       <div>
         <label htmlFor="email">Email:</label>
-        <input id="email" type="text" value={valueEmail} onChange={onChangeEmail} />
+        <input className={`isValid--${emailIsRequired}`} id="email" type="text" value={valueEmail} onChange={onChangeEmail} />
+        {emailIsRequired ? null : <p>Wymagane pole</p>}
       </div>
 
       <div>
         <label htmlFor="message">Wiadomość:</label>
-        <textarea value={valueMsg} onChange={onChangeMsg} onFocus={onFocusMsg}>Masz pytania? Napisz do nas, a postaramy się pomóc</textarea>
+        <textarea className={`isValid--${msgIsRequired}`} value={valueMsg} onChange={onChangeMsg} onFocus={onFocusMsg}>Masz pytania? Napisz do nas, a postaramy się pomóc</textarea>
+        {msgIsRequired ? null : <p>Wymagane pole</p>}
       </div>
 
       <span>
