@@ -1,6 +1,7 @@
 # Beautician_Site
 
 This project has been taken patter from kasun (beautician).
+You can open this application using this link: https://lukasz-lipinski.github.io/Beautician_Site/
 
 ## needed extensions
   npm install sass | 
