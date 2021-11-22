@@ -10,6 +10,7 @@
   height: 100%;
   background-color: $theme-color;
 
+
   .nav {
     @extend %displayFlex;
     padding: 30px 20px;
@@ -20,11 +21,33 @@
     align-items: center;
     justify-content: space-between;
 
+    @media only screen and (max-width: 750px) {
+      flex-direction: column;
+      &__logo {
+        margin-block: 20px;
+      }
+
+      &__toggler {
+        padding: 6px;
+        margin-bottom: 15px;
+        font-size: 30px;
+      }
+      &__toggler:hover {
+        background-color: hsla(0, 0%, 85%, 0.5);
+      }
+    }
+
+    
+
     &__logo {
       margin-left: 10px;
     }
 
     &__links {
+      @media only screen and (max-width: 750px){
+        display: flex;
+        flex-direction: column;
+      }
       a {
         text-decoration: none;
         color: $text-color;
@@ -43,5 +66,7 @@
         transition: color 0s;
       }
     }
+
+    
   }
 }

@@ -1,26 +1,37 @@
-import { useContext, useMemo } from 'react';
-import { NavLink } from 'react-router-dom';
+import { useContext, useState } from 'react';
+import MenuLinks from './MenuLinks';
+
 import dataContext from '../Data/dataContext';
+import Toggler from './Toggler';
+
+const useScreen = () => {
+  const [width, setWidth] = useState(window.screen.width);
+
+  window.addEventListener('resize', () => {
+    setWidth(window.innerWidth);
+  });
+  return [width];
+}
 
 export default function Menu_links() {
-  const active = useMemo(() => ({ color: '#8cd425' }), []);
+  const [width] = useScreen();
 
   const data = useContext(dataContext);
-  const { linksName, classess } = data;
+  const { classess } = data;
+
 
   return (
     <div className={`${classess.menuNav}`} id="top">
       <div className={`${classess.menuNav}__logo`}>
         <img alt="logo" />
       </div>
-      <div className={`${classess.menuNav}__links`}>
-        {linksName.map((link, index) => {
-          if (link.componentName === 'Reservation') {
-            return <NavLink reservation activeStyle={active} key={`listName-link-${index}`} to={`/${link.src}`}>{link.link}</NavLink>
-          }
-          return <NavLink activeStyle={active} key={`listName-link-${index}`} to={`/${link.src}`}>{link.link}</NavLink>
-        })}
-      </div>
+      {
+        width >= 770 ?
+          <MenuLinks />
+          :
+          <Toggler />
+      }
+
     </div>
   )
 }
