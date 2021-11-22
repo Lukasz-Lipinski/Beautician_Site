@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/Beautician_Site/static/css/main.0b9ee024.chunk.css",
-    "main.js": "/Beautician_Site/static/js/main.e7fe9cc3.chunk.js",
-    "main.js.map": "/Beautician_Site/static/js/main.e7fe9cc3.chunk.js.map",
+    "main.css": "/Beautician_Site/static/css/main.53a3fc8e.chunk.css",
+    "main.js": "/Beautician_Site/static/js/main.5943664a.chunk.js",
+    "main.js.map": "/Beautician_Site/static/js/main.5943664a.chunk.js.map",
     "runtime-main.js": "/Beautician_Site/static/js/runtime-main.a33199dc.js",
     "runtime-main.js.map": "/Beautician_Site/static/js/runtime-main.a33199dc.js.map",
-    "static/js/2.d799ab75.chunk.js": "/Beautician_Site/static/js/2.d799ab75.chunk.js",
-    "static/js/2.d799ab75.chunk.js.map": "/Beautician_Site/static/js/2.d799ab75.chunk.js.map",
+    "static/js/2.2150d46d.chunk.js": "/Beautician_Site/static/js/2.2150d46d.chunk.js",
+    "static/js/2.2150d46d.chunk.js.map": "/Beautician_Site/static/js/2.2150d46d.chunk.js.map",
     "index.html": "/Beautician_Site/index.html",
-    "static/css/main.0b9ee024.chunk.css.map": "/Beautician_Site/static/css/main.0b9ee024.chunk.css.map",
-    "static/js/2.d799ab75.chunk.js.LICENSE.txt": "/Beautician_Site/static/js/2.d799ab75.chunk.js.LICENSE.txt",
+    "static/css/main.53a3fc8e.chunk.css.map": "/Beautician_Site/static/css/main.53a3fc8e.chunk.css.map",
+    "static/js/2.2150d46d.chunk.js.LICENSE.txt": "/Beautician_Site/static/js/2.2150d46d.chunk.js.LICENSE.txt",
     "static/media/specialloffers.scss": "/Beautician_Site/static/media/specialOffersListImage--img--9.ca060028.jpg",
     "static/media/cards.scss": "/Beautician_Site/static/media/card--image__5.6f054cdc.jpg",
     "static/media/gallery.scss": "/Beautician_Site/static/media/gallery__9.9f93d5d4.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.a33199dc.js",
-    "static/js/2.d799ab75.chunk.js",
-    "static/css/main.0b9ee024.chunk.css",
-    "static/js/main.e7fe9cc3.chunk.js"
+    "static/js/2.2150d46d.chunk.js",
+    "static/css/main.53a3fc8e.chunk.css",
+    "static/js/main.5943664a.chunk.js"
   ]
 }
